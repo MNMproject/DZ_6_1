@@ -179,6 +179,10 @@ button{
     padding: 1%;
 }
 
+input{
+    text-align: left;
+}
+
 .mouse li:hover {
     background: crimson;
     color: black;
