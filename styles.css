@@ -6,7 +6,7 @@ aside {
     display: block;
     background: #f0f0f0;
     padding: 2px;
-    width: 10rem;
+    width: 12rem;
     float: left;
     position: fixed;
     height: 100%;
@@ -14,7 +14,7 @@ aside {
 }
 
 main {
-    margin-left: 11rem;
+    margin-left: 12rem;
     padding: 1rem;
 }
 
@@ -29,32 +29,77 @@ main {
     flex-direction: row;
 }
 
+.flex_row {
+    display: flex;
+    flex-direction: row;
+}
+
 .flex_column {
     display: flex;
     flex-direction: column;
 }
 
 img {
-    margin: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+   width: 100%;
+   height: 100%;
+    opacity: 0.4;
+}
+
+.up_panel{
+    margin: 0.5%;
+    margin-top: 1%;
+    height: 12vh;
+    width: 25%;
+    background-color: white;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.midle_panel{
+    margin: 0.5%;
+    margin-top: 2%;
+    height: 27vh;
+    width: 35%;
+    background-color: white;
+    box-shadow:  0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.down_panel{
+    margin: 0.5%;
+    margin-top: 2%;
+    height: 33vh;
+    width: 50%;
+    background-color: white;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 .image_up {
-    height: 14vh;
-    width: 25%;
-
+    margin: 2%;
+    margin-top: -3%;
+    height: 50%;
+    width: 15%;
+    float: left;
     /* height="90vh" width="320vw" */
 }
 
 .image_midle {
-    height: 25vh;
-    width: 35%;
+    margin: 2%;
+    margin-top: -3%;
+    height: 55%;
+    width: 95%;
+    align-content: center;
+    background-color: blue;
 }
 
 .image_down {
-    height: 36vh;
-    width: 50%;
+    margin: 1.5%;
+    margin-top: -2%;
+    height: 25%;
+    width: 97%;
+}
+
+.sub_panel{
+    text-align: right; 
+    padding: 2%;
 }
 
 .line_footer {
@@ -64,6 +109,23 @@ img {
 
 .border_footer {
     border-bottom: 1px solid gray;
+    text-align: center;
+}
+
+.border_down {
+    margin:1%;
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+
+.border_none {
+    margin: 1%;;
+    padding-bottom: 1%;
+}
+
+.border_up {
+    margin:1%;
+    border-top: 1px solid gray;
     text-align: center;
 }
 
@@ -79,16 +141,26 @@ img {
     margin-top: 0px;
 }
 
+button{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
 .mouse li:hover {
     background: crimson;
     color: black;
 }
 
-li {
+aside li {
     text-align: center;
     height: 30px;
     padding: 0px;
     margin: 0px;
+    list-style: none;
+}
+
+.up_panel li, .midle_panel li{
     list-style: none;
 }
 
@@ -102,9 +174,9 @@ ul li a {
     color: black;
 }
 
-p {
+footer p {
     text-align: left;
-    height: 30px;
+    height: 25px;
     padding: 0px;
     margin: 0px;
 }
@@ -112,7 +184,7 @@ p {
 footer {
     display: block;
     margin-left: 11rem;
-    padding-right: 1rem;
+    padding-right: 2%;
 }
 
 .tri_poloski {
@@ -124,6 +196,13 @@ footer {
     justify-content: left;
 }
 
+.tabl{
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 200px auto 100px;
+    grid-template-rows: 200px auto 100px;
+}
+
 @media screen and (min-width:1000px) {
     .tri_poloski {
         display: none;
@@ -132,19 +211,26 @@ footer {
 
 @media screen and (min-width:800px) and (max-width:1000px) {
 
-    .image_up {
+    .up_panel{ 
+        margin: 1%;
+        margin-top: 2%;
         height: 14vh;
         width: 48%;
     }
-
-    .image_midle {
+    
+    .midle_panel {
         height: 25vh;
         width: 35%;
     }
 
-    .image_down {
+    .down_panel {
         height: 36vh;
         width: 100%;
+        margin-top: 3%;
+    }
+
+    .image_midle {
+        height: 35%;
     }
 
     .tri_poloski {
@@ -160,17 +246,20 @@ footer {
 
 @media screen and (min-width:650px) and (max-width:800px) {
 
-    .image_up {
+    .up_panel {
+        margin-top: 2%;
         height: 14vh;
         width: 48%;
     }
 
-    .image_midle {
-        height: 25vh;
+    .midle_panel {
+        margin-top: 3%;
+        height: 26vh;
         width: 35%;
     }
 
-    .image_down {
+    .down_panel {
+        margin-top: 3%;
         height: 36vh;
         width: 100%;
     }
@@ -196,17 +285,20 @@ footer {
 
 @media screen and (min-width:500px) and (max-width:650px) {
 
-    .image_up {
+    .up_panel {
+        margin-top: 3%;
         height: 14vh;
         width: 48%;
     }
 
-    .image_midle {
-        height: 25vh;
-        width: 100%;
+    .midle_panel {
+        margin-top: 5%;
+        height: 29vh;
+        width: 100%;    
     }
 
-    .image_down {
+    .down_panel {
+        margin-top: 5%;
         height: 36vh;
         width: 100%;
     }
@@ -233,17 +325,20 @@ footer {
 
 @media screen and (max-width:550px) {
 
-    .image_up {
+    .up_panel {
+        margin-top: 4%;
         height: 14vh;
         width: 100%;
     }
 
-    .image_midle {
-        height: 25vh;
+    .midle_panel {
+        margin-top: 5%;
+        height: 29vh;
         width: 100%;
     }
 
-    .image_down {
+    .down_panel {
+        margin-top: 5%;
         height: 36vh;
         width: 100%;
     }
