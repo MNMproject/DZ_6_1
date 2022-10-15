@@ -147,6 +147,38 @@ button{
     color: white;
 }
 
+.display_left_tabl{
+    display:inline;
+    text-align: left;
+    width: 85%;
+    margin: 1%;
+}
+
+.display_left_tabl_icon{
+    display:inline; 
+    align-items: center;
+}
+
+.display_right_tabl_head{
+    display:inline; 
+    text-align: left; 
+    width: 25%; 
+    margin: 1%;
+}
+
+.display_right_tabl{
+    display:inline; 
+    text-align: left; 
+    width: 25%; 
+    margin-left: 1%;
+}
+
+.display_mini_icon{
+    font-size:xx-small; 
+    text-align: left; 
+    padding: 1%;
+}
+
 .mouse li:hover {
     background: crimson;
     color: black;
